@@ -1,0 +1,4 @@
+service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+1442, 0, 0, 0, 0, 0, 0, 0, 20250109, 20250110
+2759, 0, 0, 0, 0, 0, 0, 0, 20241226, 20241231
+2765, 0, 0, 0, 0, 0, 0, 0, 20241225, 20241225
