@@ -1,0 +1,132 @@
+2025-03-05T11:42:53,448  WARN PrepareForSimImpl:265 'usePersonIdForMissingVehicleId' is deprecated. It will be removed soon.
+2025-03-05T11:43:03,928  WARN RandomizingTimeDistanceTravelDisutilityFactory:113 There will be no routing randomness. The randomization of the travel disutility requires the monetary distance rate to be different than zero. Continuing anyway.
+2025-03-05T11:43:03,928  WARN RandomizingTimeDistanceTravelDisutilityFactory:118 There will be no routing randomness. The randomization of the travel disutility requires the travel time cost rate to be different than zero. Continuing anyway.
+2025-03-05T11:43:03,939  WARN SpeedyALTData:141 Network does not contain any nodes!
+2025-03-05T11:43:03,942  WARN NetworkRoutingProvider:136 [mode: car; routingMode: car] Using deprecated routing module without access/egress. Consider using AccessEgressNetworkRouter instead.
+2025-03-05T11:43:03,990  WARN NetworkRoutingProvider:136 [mode: car; routingMode: car] Using deprecated routing module without access/egress. Consider using AccessEgressNetworkRouter instead.
+2025-03-05T11:43:04,211  WARN NetworkRoutingProvider:136 [mode: car; routingMode: car] Using deprecated routing module without access/egress. Consider using AccessEgressNetworkRouter instead.
+2025-03-05T11:43:04,212  WARN NetworkRoutingProvider:136 [mode: car; routingMode: car] Using deprecated routing module without access/egress. Consider using AccessEgressNetworkRouter instead.
+2025-03-05T11:43:04,399  WARN Dijkstra:307 No route was found from node SHP_970_V_133 to node SHP_970_I_0. Some possible reasons:
+2025-03-05T11:43:04,400  WARN Dijkstra:308   * Network is not connected.  Run NetworkCleaner().
+2025-03-05T11:43:04,400  WARN Dijkstra:309   * Network for considered mode does not even exist.  Modes need to be entered for each link in network.xml.
+2025-03-05T11:43:04,400  WARN Dijkstra:310   * Network for considered mode is not connected to starting or ending point of route.  Setting insertingAccessEgressWalk to true may help.
+2025-03-05T11:43:04,400  WARN Dijkstra:311 This will now return null, but it may fail later with a null pointer exception.
+2025-03-05T11:43:04,401 ERROR QSim:346 got exception while cleaning up
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "org.matsim.core.mobsim.qsim.qnetsimengine.AbstractQNetsimEngine.getQnetsimEngineRunner()" is null
+	at org.matsim.core.mobsim.qsim.qnetsimengine.AbstractQNetsimEngine.afterSim(AbstractQNetsimEngine.java:172) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.cleanupSim(QSim.java:343) [classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:255) [classes/:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) [classes/:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) [classes/:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) [classes/:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) [classes/:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) [classes/:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) [classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [classes/:?]
+	at org.matsim.run.RunMatsim.run(RunMatsim.java:56) [classes/:?]
+	at org.matsim.run.RunMatsim.main(RunMatsim.java:60) [classes/:?]
+2025-03-05T11:43:04,420  WARN QSim:260 exception in finally block - this may be a follow-up exception of an exception thrown in the try block.
+java.lang.RuntimeException: got exception while cleaning up the QSim. Please check the error messages above for details.
+	at org.matsim.core.mobsim.qsim.QSim.cleanupSim(QSim.java:351) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:255) [classes/:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) [classes/:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) [classes/:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) [classes/:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) [classes/:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) [classes/:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) [classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [classes/:?]
+	at org.matsim.run.RunMatsim.run(RunMatsim.java:56) [classes/:?]
+	at org.matsim.run.RunMatsim.main(RunMatsim.java:60) [classes/:?]
+2025-03-05T11:43:04,421 ERROR AbstractController:225 Mobsim did not complete normally! afterMobsimListeners will be called anyway.
+java.lang.RuntimeException: No route found from node SHP_970_V_133 to node SHP_970_I_0.
+	at org.matsim.pt.UmlaufInterpolator.insertWenden(UmlaufInterpolator.java:78) ~[classes/:?]
+	at org.matsim.pt.UmlaufInterpolator.addUmlaufStueckToUmlauf(UmlaufInterpolator.java:64) ~[classes/:?]
+	at org.matsim.pt.ReconstructingUmlaufBuilder.createUmlaeufe(ReconstructingUmlaufBuilder.java:99) ~[classes/:?]
+	at org.matsim.pt.ReconstructingUmlaufBuilder.build(ReconstructingUmlaufBuilder.java:80) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.getOrCreateUmlaufCache(TransitQSimEngine.java:158) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.createVehiclesAndDriversWithUmlaeufe(TransitQSimEngine.java:143) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.insertAgentsIntoMobsim(TransitQSimEngine.java:220) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.createAgents(QSim.java:295) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.prepareSim(QSim.java:280) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:228) ~[classes/:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) [classes/:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) [classes/:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) [classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [classes/:?]
+	at org.matsim.run.RunMatsim.run(RunMatsim.java:56) [classes/:?]
+	at org.matsim.run.RunMatsim.main(RunMatsim.java:60) [classes/:?]
+2025-03-05T11:43:04,431 ERROR MatsimRuntimeModifications:76 Getting uncaught Exception in Thread main
+java.lang.RuntimeException: No route found from node SHP_970_V_133 to node SHP_970_I_0.
+	at org.matsim.pt.UmlaufInterpolator.insertWenden(UmlaufInterpolator.java:78) ~[classes/:?]
+	at org.matsim.pt.UmlaufInterpolator.addUmlaufStueckToUmlauf(UmlaufInterpolator.java:64) ~[classes/:?]
+	at org.matsim.pt.ReconstructingUmlaufBuilder.createUmlaeufe(ReconstructingUmlaufBuilder.java:99) ~[classes/:?]
+	at org.matsim.pt.ReconstructingUmlaufBuilder.build(ReconstructingUmlaufBuilder.java:80) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.getOrCreateUmlaufCache(TransitQSimEngine.java:158) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.createVehiclesAndDriversWithUmlaeufe(TransitQSimEngine.java:143) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.insertAgentsIntoMobsim(TransitQSimEngine.java:220) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.createAgents(QSim.java:295) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.prepareSim(QSim.java:280) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:228) ~[classes/:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) ~[classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [classes/:?]
+	at org.matsim.run.RunMatsim.run(RunMatsim.java:56) [classes/:?]
+	at org.matsim.run.RunMatsim.main(RunMatsim.java:60) [classes/:?]
+2025-03-05T11:43:04,432 ERROR MatsimRuntimeModifications:82 ERROR --- This is an unexpected shutdown!
+2025-03-05T11:43:04,432 ERROR MatsimRuntimeModifications:85 Shutdown possibly caused by the following Exception:
+java.lang.RuntimeException: No route found from node SHP_970_V_133 to node SHP_970_I_0.
+	at org.matsim.pt.UmlaufInterpolator.insertWenden(UmlaufInterpolator.java:78) ~[classes/:?]
+	at org.matsim.pt.UmlaufInterpolator.addUmlaufStueckToUmlauf(UmlaufInterpolator.java:64) ~[classes/:?]
+	at org.matsim.pt.ReconstructingUmlaufBuilder.createUmlaeufe(ReconstructingUmlaufBuilder.java:99) ~[classes/:?]
+	at org.matsim.pt.ReconstructingUmlaufBuilder.build(ReconstructingUmlaufBuilder.java:80) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.getOrCreateUmlaufCache(TransitQSimEngine.java:158) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.createVehiclesAndDriversWithUmlaeufe(TransitQSimEngine.java:143) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.pt.TransitQSimEngine.insertAgentsIntoMobsim(TransitQSimEngine.java:220) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.createAgents(QSim.java:295) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.prepareSim(QSim.java:280) ~[classes/:?]
+	at org.matsim.core.mobsim.qsim.QSim.run(QSim.java:228) ~[classes/:?]
+	at org.matsim.core.controler.NewControler.runMobSim(NewControler.java:125) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:214) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:246) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:210) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:157) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:124) ~[classes/:?]
+	at org.matsim.core.controler.AbstractController$1.run(AbstractController.java:84) ~[classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:70) [classes/:?]
+	at org.matsim.core.controler.MatsimRuntimeModifications.run(MatsimRuntimeModifications.java:53) [classes/:?]
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:92) [classes/:?]
+	at org.matsim.core.controler.NewControler.run(NewControler.java:83) [classes/:?]
+	at org.matsim.core.controler.Controler.run(Controler.java:259) [classes/:?]
+	at org.matsim.run.RunMatsim.run(RunMatsim.java:56) [classes/:?]
+	at org.matsim.run.RunMatsim.main(RunMatsim.java:60) [classes/:?]
+2025-03-05T11:43:04,677 ERROR MatsimRuntimeModifications:100 ERROR --- MATSim unexpectedly terminated. Please check the output or the logfile with warnings and errors for hints.
+2025-03-05T11:43:04,677 ERROR MatsimRuntimeModifications:101 ERROR --- results should not be used for further analysis.
+2025-03-05T11:43:04,677 ERROR MatsimRuntimeModifications:105 ERROR --- This was an unexpected shutdown! See the log file for a possible reason.
