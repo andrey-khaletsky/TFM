@@ -4,11 +4,11 @@
 
 	<module name="global">
 		<param name="randomSeed" value="4711" />
-		<param name="coordinateSystem" value="gk3" />
+		<param name="coordinateSystem" value="EPSG:3035" />
 	</module>
 
 	<module name="network">
-		<param name="inputNetworkFile" value="network_v1.xml" />
+		<param name="inputNetworkFile" value="network_v2.xml" />
 	</module>
 
 	<module name="plans">
@@ -65,14 +65,13 @@
 
 			<parameterset type="modeParams">
 				<param name="mode" value="pt"/>
-                <param name="marginalUtilityOfDistance_util_m" value="0.0" />
-				<param name="marginalUtilityOfTraveling_util_hr" value="-12.0" />
+                			<param name="marginalUtilityOfDistance_util_m" value="0.0" />
+				<param name="marginalUtilityOfTraveling_util_hr" value="-3.0" />
 			</parameterset>
 			<parameterset type="modeParams">
+				<param name="mode" value="walk"/>
 				<param name="marginalUtilityOfDistance_util_m" value="0.0" />
 				<param name="marginalUtilityOfTraveling_util_hr" value="-12.0" />
-				<param name="mode" value="walk"/>
-				<param name="constant" value="-0.0" />
 			</parameterset>
 
 			<parameterset type="activityParams">
@@ -109,20 +108,7 @@
 		</parameterset>
 	</module>
 
-	<module name="transitRouter" >
 
-		<!-- additional time the router allocates when a line switch happens, Can be interpreted as a 'savity' time that agents need to savely transfer from one line to another -->
-		<param name="additionalTransferTime" value="0.0" />
-
-		<!-- step size to increase searchRadius if no stops are found -->
-		<param name="extensionRadius" value="1000.0" />
-
-		<!-- maximum beeline distance between stops that agents could transfer to by walking -->
-		<param name="maxBeelineWalkConnectionDistance" value="1500.0" />
-
-		<!-- the radius in which stop locations are searched, given a start or target coordinate -->
-		<param name="searchRadius" value="10000.0" />
-	</module>
 
 
 </config>
