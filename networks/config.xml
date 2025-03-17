@@ -108,7 +108,8 @@
 		</parameterset>
 	</module>
 
-
-
+	<module name="transitRouter">
+		<param name="directWalkFactor" value="1000" />
+	</module>
 
 </config>

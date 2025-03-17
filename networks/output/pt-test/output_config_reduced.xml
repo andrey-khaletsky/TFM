@@ -5,20 +5,31 @@
 		<!-- Default=1000. Last Iteration of a simulation. -->
 		<param name="lastIteration" value="10" />
 		<param name="outputDirectory" value="./output/pt-test" />
+		<!-- Possible values: failIfDirectoryExists,overwriteExistingFiles,deleteDirectoryIfExists -->
+		<param name="overwriteFiles" value="overwriteExistingFiles" />
 		<!-- iterationNumber % writeEventsInterval == 0 defines in which iterations events are written to a file. `0' disables events writing completely. -->
 		<param name="writeEventsInterval" value="1" />
 	</module>
 	<module name="global" >
-		<param name="coordinateSystem" value="EPSG:3035" />
+		<param name="coordinateSystem" value="epsg:3035" />
+	</module>
+	<module name="hermes" >
+		<param name="mainMode" value="pt" />
 	</module>
 	<module name="network" >
-		<param name="inputNetworkFile" value="network_v2.xml" />
+		<!-- The Coordinates Reference System in which the coordinates are expressed in the input file. At import, the coordinates will be converted to the coordinate system defined in "global", and willbe converted back at export. If not specified, no conversion happens. -->
+		<param name="inputCRS" value="epsg:3035" />
+		<param name="inputNetworkFile" value="network_v4.xml" />
 	</module>
 	<module name="plans" >
+		<!-- Possible values: reject,useMainModeIdentifier -->
+		<param name="handlingOfPlansWithoutRoutingMode" value="useMainModeIdentifier" />
+		<!-- The Coordinates Reference System in which the coordinates are expressed in the input file. At import, the coordinates will be converted to the coordinate system defined in "global", and willbe converted back at export. If not specified, no conversion happens. -->
+		<param name="inputCRS" value="epsg:3035" />
 		<param name="inputPlansFile" value="population100.xml" />
 	</module>
 	<module name="qsim" >
-		<param name="endTime" value="24:00:00" />
+		<param name="endTime" value="48:00:00" />
 		<param name="startTime" value="00:00:00" />
 		<!-- Defines what happens if an agent wants to depart, but the specified vehicle is not available. One of: teleport wait exception  -->
 		<param name="vehicleBehavior" value="wait" />
@@ -120,12 +131,22 @@
 		<param name="mutationRange" value="7200.0" />
 	</module>
 	<module name="transit" >
+		<!-- The Coordinates Reference System in which the coordinates are expressed in the input file. At import, the coordinates will be converted to the coordinate system defined in "global", and willbe converted back at export. If not specified, no conversion happens. -->
+		<param name="inputScheduleCRS" value="epsg:3035" />
 		<!-- Input file containing the transit schedule to be simulated. -->
 		<param name="transitScheduleFile" value="transitschedule.xml" />
 		<!-- Set this parameter to true if transit should be simulated, false if not. -->
 		<param name="useTransit" value="true" />
 		<!-- Input file containing the vehicles used by the departures in the transit schedule. -->
 		<param name="vehiclesFile" value="vehicleDefinitions.xml" />
+	</module>
+	<module name="transitRouter" >
+		<!-- step size to increase searchRadius if no stops are found -->
+		<param name="extensionRadius" value="200000.0" />
+		<!-- maximum beeline distance between stops that agents could transfer to by walking -->
+		<param name="maxBeelineWalkConnectionDistance" value="1.0" />
+		<!-- the radius in which stop locations are searched, given a start or target coordinate -->
+		<param name="searchRadius" value="1.0E7" />
 	</module>
 
 </config>
