@@ -1,6 +1,8 @@
 /data/redes/bici/
 /data/redes/caminable/
 /matsim-2024.0/
+/Via-24.1.0/
 /matsim-libs/
 /matsim-example-project/
-*/output/
+**/output/
+*.pkl
