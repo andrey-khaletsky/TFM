@@ -1,7 +1,0 @@
-pattern	0+	5+	10+	15+	20+	25+	30+	35+	40+	45+	50+	55+	60+
-h---pt interaction	33	32	15	7	2	1	1	1	0	0	0	0	0
-h---w	0	0	1	5	0	0	0	1	1	0	0	0	0
-pt interaction---pt interaction	59	35	33	25	7	8	6	1	0	2	1	1	6
-pt interaction---w	37	27	14	7	4	2	1	0	0	0	0	0	0
-
-average leg duration: 672.688829787234 seconds = 00:11:12
